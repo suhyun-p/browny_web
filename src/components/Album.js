@@ -36,7 +36,9 @@ const Album= ({classInfo}) => {
     return (
         <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div style={{background: 'lightgray'}}>
+                    <img src={classInfo.image} width="100%" height="225" style={{objectFit: 'scale-down'}}/>
+                </div>
                 <div class="card-body">
                     <strong class="d-inline-block mb-2 text-primary">{Genre(classInfo.genre)}</strong>
                     &nbsp;&nbsp;
@@ -45,7 +47,7 @@ const Album= ({classInfo}) => {
                     <strong class="d-inline-block mb-2 text-success">{ClassType(classInfo.type)}</strong>
                     &nbsp;&nbsp;
                     <strong class="d-inline-block mb-2 text-warning">World</strong>
-                    <h3 class="mb-0">{classInfo.title}</h3>
+                    <h5 class="mb-0">{classInfo.title}</h5>
                     <div class="mb-1 text-muted">
                         <span>{classInfo.startDate}</span>
                         &nbsp;~&nbsp;

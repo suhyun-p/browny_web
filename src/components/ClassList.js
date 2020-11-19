@@ -1,6 +1,15 @@
 import React from 'react';
 import Album from './Album.js';
 
+import class_image_1 from '../images/class_1.jpeg';
+import class_image_2 from '../images/class_2.jpeg';
+import class_image_3 from '../images/class_3.jpeg';
+import class_image_4 from '../images/class_4.jpeg';
+import class_image_5 from '../images/class_5.jpeg';
+import class_image_6 from '../images/class_6.jpeg';
+import class_image_7 from '../images/class_7.jpeg';
+
+
 class ClassList extends React.Component {
     state = {
       classList: []
@@ -12,6 +21,7 @@ class ClassList extends React.Component {
           seq: 1,
           genre: "S",
           region: "HD",
+          image: class_image_2,
           title: "아오라 살사 스페셜 에센스 시즌 2",
           startDate: "11/7",
           endDate: "12/12",
@@ -27,6 +37,7 @@ class ClassList extends React.Component {
           genre: "B",
           region: "HD",
           type: "O",
+          image: class_image_1,
           title: "갬성끌올, 트렌디패턴 특강",
           startDate: "11/6",
           endDate: "11/27",
@@ -42,6 +53,7 @@ class ClassList extends React.Component {
           genre: "B",
           region: "GN",
           type: "",
+          image: class_image_3,
           title: "연말빠뤼 발표반",
           startDate: "11/5",
           endDate: "12/10",
@@ -57,6 +69,7 @@ class ClassList extends React.Component {
           genre: "B",
           region: "HD",
           type: "",
+          image: class_image_3,
           title: "연말빠뤼 발표반",
           startDate: "11/7",
           endDate: "12/12",
@@ -72,6 +85,7 @@ class ClassList extends React.Component {
           genre: "B",
           region: "GN",
           type: "",
+          image: class_image_4,
           title: "소수정예 바차타센슈얼 집중코칭반",
           startDate: "11/5",
           endDate: "11/26",
@@ -87,6 +101,7 @@ class ClassList extends React.Component {
           genre: "S",
           region: "HD",
           type: "",
+          image: class_image_5,
           title: "아오라 살사 정규시작반 5기",
           startDate: "11/7",
           endDate: "12/12",
@@ -102,6 +117,7 @@ class ClassList extends React.Component {
           genre: "S",
           region: "HD",
           type: "",
+          image: class_image_7,
           title: "아오라 살사 LV.2",
           startDate: "11/7",
           endDate: "12/12",
@@ -117,6 +133,7 @@ class ClassList extends React.Component {
           genre: "B",
           region: "HD",
           type: "",
+          image: class_image_7,
           title: "아오라 바차타 LV.2",
           startDate: "11/7",
           endDate: "12/12",
