@@ -1,4 +1,9 @@
 import React from 'react';
+import Header from '../components/Header.js';
+import Navigation from '../components/Navigation.js';
+import Footer from '../components/Footer.js';
+import Jumbotron from '../components/Jumbotron.js';
+import ClassDetail from '../components/ClassDetail.js';
 
 class Class extends React.Component {
     state = {
@@ -13,7 +18,15 @@ class Class extends React.Component {
     render() {
       const {classInfo} = this.state;
       return (
-        <span>{classInfo.title}</span>
+        <>
+          <div class="container">
+            <Header/>
+            <Navigation/>
+            <Jumbotron/>
+            <ClassDetail/>
+          </div>
+          <Footer/>
+        </>
       )
 
     }
