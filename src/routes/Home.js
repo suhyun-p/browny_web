@@ -27,14 +27,20 @@ class App extends React.Component {
         region: "HD",
         image: class_image_2,
         title: "아오라 살사 스페셜 에센스 시즌 2",
+        inst1: "노랑강사",
+        inst2: "스칼렛",
         startDate: "11/7",
         endDate: "12/12",
         dateDesc: "총 6주, 매주 토요일",
         startTime: "20:00",
         endTime: "21:00",
         timeDesc: "1회 60분",
+        location: "댄싱아일랜드 or 별도 연습실",
         price: "100,000",
-        priceDesc: ""
+        priceDesc: "",
+        account: "우리은행 180-08244668 | 전신영",
+        target: "초급 수료 이상(intermediate)",
+        inquery: "스칼렛 | 010-2335-8364"
       },
       {
         seq: 2,

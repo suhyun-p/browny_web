@@ -21,10 +21,10 @@ class Class extends React.Component {
         <>
           <div class="container">
             <Header/>
-            <Navigation/>
-            <Jumbotron/>
-            <ClassDetail/>
+            <br/>
+            <ClassDetail classInfo={classInfo}/>
           </div>
+          <br/>
           <Footer/>
         </>
       )
