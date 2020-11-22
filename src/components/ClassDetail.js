@@ -39,7 +39,7 @@ const ClassDetail= ({classInfo}) => {
             return (<li>{option}</li>);
         })
     }
-    let account = classInfo.account !== "" ? <><br/>{classInfo.account}</> : null;
+    let account = classInfo.account !== "" ? <><li class="list-group-item">{classInfo.account}</li></> : null;
     let target = classInfo.target !== "" ? <li class="list-group-item">{classInfo.target}</li> : null;
     let etc = classInfo.etc != "" ? <li class="list-group-item">{classInfo.etc}</li> : null;
     let inquery = classInfo.inquery !== "" ? <li class="list-group-item">{classInfo.inquery}</li> : null;
@@ -75,8 +75,8 @@ const ClassDetail= ({classInfo}) => {
                     <li class="list-group-item">
                         ₩{classInfo.price}&nbsp;({classInfo.priceDesc})
                         {discount}
-                        {account}
                     </li>
+                    {account}
                     {target}
                     {etc}
                     {inquery}

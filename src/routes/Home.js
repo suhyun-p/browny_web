@@ -167,8 +167,7 @@ class App extends React.Component {
         price: "70,000",
         priceDesc: "",
         discountOption: [
-          "11/1까지 신청 완료 시 6만원",
-          "환불 및 이월 불가 / 양도 가능"
+          "11/1까지 신청 완료 시 6만원"
         ],
         account: "우리은행 180-08-244668 전신영",
         target: "입문자(Basic Level)",
