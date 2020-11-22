@@ -23,6 +23,27 @@ const ClassDetail= ({classInfo}) => {
         }
     }
 
+    const ClassType = (type) => {
+        switch(type) {
+            case "O":
+                return "Open";
+            default:
+                return ""
+        }
+    };
+
+    let location = classInfo.location !== "" ? <li class="list-group-item">{classInfo.location}</li> : null;
+    let discount = null;
+    if(classInfo.discountOption != null) {
+        discount = classInfo.discountOption.map((option) => {
+            return (<li>{option}</li>);
+        })
+    }
+    let account = classInfo.account !== "" ? <><br/>{classInfo.account}</> : null;
+    let target = classInfo.target !== "" ? <li class="list-group-item">{classInfo.target}</li> : null;
+    let etc = classInfo.etc != "" ? <li class="list-group-item">{classInfo.etc}</li> : null;
+    let inquery = classInfo.inquery !== "" ? <li class="list-group-item">{classInfo.inquery}</li> : null;
+
     return (
         <div class="row featurette">
             <div class="col-md-5 order-md-1">
@@ -33,6 +54,8 @@ const ClassDetail= ({classInfo}) => {
                 <span class="badge badge-primary">{Genre(classInfo.genre)}</span>
                 &nbsp;
                 <span class="badge badge-primary">{Region(classInfo.region)}</span>
+                &nbsp;
+                <span class="badge badge-primary">{ClassType(classInfo.type)}</span>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
                         {classInfo.inst1}, {classInfo.inst2}
@@ -48,14 +71,15 @@ const ClassDetail= ({classInfo}) => {
                         <span>{classInfo.endTime}</span>
                         &nbsp;({classInfo.timeDesc})
                     </li>
-                    <li class="list-group-item">{classInfo.location}</li>
+                    {location}
                     <li class="list-group-item">
                         ₩{classInfo.price}&nbsp;({classInfo.priceDesc})
-                        <br/>
-                        {classInfo.account}
+                        {discount}
+                        {account}
                     </li>
-                    <li class="list-group-item">{classInfo.target}</li>
-                    <li class="list-group-item">{classInfo.inquery}</li>
+                    {target}
+                    {etc}
+                    {inquery}
                 </ul>
             </div>
         </div>
