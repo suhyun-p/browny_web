@@ -19,7 +19,7 @@ class Class extends React.Component {
       const {classInfo} = this.state;
       return (
         <>
-          <div class="container">
+          <div className="container">
             <Header/>
             <br/>
             <ClassDetail classInfo={classInfo}/>

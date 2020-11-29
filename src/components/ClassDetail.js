@@ -32,35 +32,35 @@ const ClassDetail= ({classInfo}) => {
         }
     };
 
-    let location = classInfo.location !== "" ? <li class="list-group-item">{classInfo.location}</li> : null;
+    let location = classInfo.location !== "" ? <li className="list-group-item">{classInfo.location}</li> : null;
     let discount = null;
     if(classInfo.discountOption != null) {
         discount = classInfo.discountOption.map((option) => {
             return (<li>{option}</li>);
         })
     }
-    let account = classInfo.account !== "" ? <><li class="list-group-item">{classInfo.account}</li></> : null;
-    let target = classInfo.target !== "" ? <li class="list-group-item">{classInfo.target}</li> : null;
-    let etc = classInfo.etc != "" ? <li class="list-group-item">{classInfo.etc}</li> : null;
-    let inquery = classInfo.inquery !== "" ? <li class="list-group-item">{classInfo.inquery}</li> : null;
+    let account = classInfo.account !== "" ? <><li className="list-group-item">{classInfo.account}</li></> : null;
+    let target = classInfo.target !== "" ? <li className="list-group-item">{classInfo.target}</li> : null;
+    let etc = classInfo.etc != "" ? <li className="list-group-item">{classInfo.etc}</li> : null;
+    let inquery = classInfo.inquery !== "" ? <li className="list-group-item">{classInfo.inquery}</li> : null;
 
     return (
-        <div class="row featurette">
-            <div class="col-md-5 order-md-1">
+        <div className="row featurette">
+            <div className="col-md-5 order-md-1">
                 <img src={classInfo.image} width="100%" height="100%" style={{objectFit: 'contain'}}/>      
             </div>
-            <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading">{classInfo.title}</h2>
-                <span class="badge badge-primary">{Genre(classInfo.genre)}</span>
+            <div className="col-md-7 order-md-2">
+                <h2 className="featurette-heading">{classInfo.title}</h2>
+                <span className="badge badge-primary">{Genre(classInfo.genre)}</span>
                 &nbsp;
-                <span class="badge badge-primary">{Region(classInfo.region)}</span>
+                <span className="badge badge-primary">{Region(classInfo.region)}</span>
                 &nbsp;
-                <span class="badge badge-primary">{ClassType(classInfo.type)}</span>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
+                <span className="badge badge-primary">{ClassType(classInfo.type)}</span>
+                <ul className="list-group list-group-flush">
+                    <li className="list-group-item">
                         {classInfo.inst1}, {classInfo.inst2}
                     </li>
-                    <li class="list-group-item">
+                    <li className="list-group-item">
                         <span>{classInfo.startDate}</span>
                         &nbsp;~&nbsp;
                         <span>{classInfo.endDate}</span>
@@ -72,7 +72,7 @@ const ClassDetail= ({classInfo}) => {
                         &nbsp;({classInfo.timeDesc})
                     </li>
                     {location}
-                    <li class="list-group-item">
+                    <li className="list-group-item">
                         ₩{classInfo.price}&nbsp;({classInfo.priceDesc})
                         {discount}
                     </li>

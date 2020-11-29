@@ -235,11 +235,11 @@ class App extends React.Component {
 
     return  (
       <>
-        <div class="container">
+        <div className="container">
           <Header/>
           <Navigation/>
           <Jumbotron/>
-          <div class="row mb-2">
+          <div className="row mb-2">
             {classInfoList.map((classInfo) => { return <Card key={classInfo.seq} classInfo={classInfo} /> })}
           </div>
         </div>
